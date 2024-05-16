@@ -53,7 +53,7 @@ Amazon Redshift's architecture is designed to work well with large-scale data pr
 
 
 **
-A detailed description of the ETL process.**
+**A detailed description of the ETL process.****
 
 i.	Create the staging, dimension, and fact table:
 •	Create a staging table that matches the structure of the data you want to load. 
@@ -62,13 +62,13 @@ i.	Create the staging, dimension, and fact table:
  
  
 
-ii.	Upload files in S3 bucket:
+**ii.	Upload files in S3 bucket:**
 •	Create an S3 bucket and upload the required file which we want to load to the staging table. 
 •	S3 is designed to store and retrieve any amount of data from anywhere on the web. 
 •	It is widely used for data storage, backup, content distribution, and data archiving.
  
 
-iii.	Load data from S3 to Staging table:
+**iii.	Load data from S3 to Staging table:**
 •	Select “Load Data” to import data into the staging table. 
 •	In the dialog box, browse S3 file location, select file format and choose delimiter character. 
 •	In advance settings, you have options to select the required parameters for data conversion and handling null values.
@@ -78,10 +78,10 @@ iii.	Load data from S3 to Staging table:
  
  
 
-iv.	Load data into dimensions and update Staging table:
+**iv.	Load data into dimensions and update Staging table:**
 •	Using the staging table, we will insert data into dimensions using INSERT statements and auto generate id of all dimensions and update ids that are present in staging table using the dimensions.
  
-v.	Load data into Fact table:
+v.	**Load data into Fact table:**
 •	Once the staging table is updated, use INSERT statement to move data into the final fact table. Necessary data transformations are also performed during this step.
  
 vi.	Business Question: State wise online sales distribution of Adidas in Northeast Region.
